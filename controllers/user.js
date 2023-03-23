@@ -14,6 +14,7 @@ user.post("/CreateUser", function(req, res){
     function(erro){
         if(erro){
             res.send(erro)
+            console.log(erro)
         }
         else{
             res.send("Usuario criado com sucesso")
@@ -21,6 +22,7 @@ user.post("/CreateUser", function(req, res){
     })
 })
 
+//select
 user.get("/VerUsers", function(req, res){
     database.all(`select * from user`, function(erro, user){
         if(erro){

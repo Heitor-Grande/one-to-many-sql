@@ -23,3 +23,11 @@ app.get("/selectProducts", product)
 const user = require("./controllers/user")
 app.post("/CreateUser", user)
 app.get("/VerUsers", user)
+
+//order
+const order = require("./controllers/order")
+app.post("/CreateOrder/:idUser", order)
+
+// order_product
+const  order_product = require("./controllers/order_product")
+app.get("/SelectOrderproduct",  order_product)
